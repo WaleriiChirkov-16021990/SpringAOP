@@ -36,6 +36,9 @@ spring:
   h2:
     console:
       enabled: true
+#  aop:
+#    auto: on
+#    proxy-target-class: on
 #      path: /h2
 
 logging:
