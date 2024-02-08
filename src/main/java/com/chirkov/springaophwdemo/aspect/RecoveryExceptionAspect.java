@@ -21,9 +21,9 @@ public class RecoveryExceptionAspect {
             return joinPoint.proceed();
         } catch (Throwable e) {
             for (Class<? extends RuntimeException> exceptionClass : recoverException.noRecovery()) {
-                String ex = exceptionClass.getSimpleName();
-                String eThr = e.getClass().getSimpleName();
-                if (ex.equals(eThr)) {
+//                String ex = ;
+//                String eThr = ;
+                if (exceptionClass.getSimpleName().equals(e.getClass().getSimpleName()) && exceptionClass.isAssignableFrom(e.getClass())) {
                     throw new Throwable(e);
                 }
             }
